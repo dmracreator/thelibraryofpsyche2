@@ -27,10 +27,16 @@ Use a regular-weight Nourd file. If your licence provides another webfont format
 - Replace the four PNGs in `assets/` with your own final images, keeping the filenames or updating their paths and descriptions in `index.html`.
 - Current portfolio images are the four supplied visual concepts, clearly labelled as concepts on the page. Check ownership or permission for all photography within those concepts before publishing publicly.
 - Update the `width` and `height` attributes if replacement images have different dimensions.
-- All five brand colours are defined at the top of `styles.css`.
+- All six brand colours are defined at the top of `styles.css`.
 - The contact link opens the visitor’s email app. There is no form service, tracking, cookie banner, or mailing-list integration.
 - The site does not invent past clients, testimonials, audience statistics, or affiliate memberships. Add verified details as they become available.
 
 ## Preview locally
 
 Open `index.html` in a browser, or run `python3 -m http.server 4173` from this folder and visit http://localhost:4173.
+
+## Brand reference
+
+Palette: #f6f5f3, #8b3a3b, #3a3a3a, #ffedf3, #656565, and deep burgundy #5d2526. Use the supplied LP image as the favicon.
+
+Workshop photographs were cleaned with the built-in image editor to remove social-media overlays. Prompt: remove only superimposed text and UI; preserve people, objects, setting, lighting, and real-world signage.
