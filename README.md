@@ -40,3 +40,14 @@ Open `index.html` in a browser, or run `python3 -m http.server 4173` from this f
 Palette: #f6f5f3, #8b3a3b, #3a3a3a, #ffedf3, #656565, and deep burgundy #5d2526. Use the supplied LP image as the favicon.
 
 Workshop photographs were cleaned with the built-in image editor to remove social-media overlays. Prompt: remove only superimposed text and UI; preserve people, objects, setting, lighting, and real-world signage.
+
+## Add books to your reading shelf
+
+1. Open `edit-shelf.html` in your browser (double-click it, or visit your site’s `/edit-shelf.html` address).
+2. Add the title, author, optional finish month, your own review, and an optional affiliate URL.
+3. Choose a cover photo from your computer, or enter an image URL or a path such as `assets/covers/my-book.jpg`. Chosen photos are embedded in the exported file, so no separate image upload is needed. For a local path, upload that image separately. Use small web-friendly images you have permission to use.
+4. Click **Add to my shelf**. Use **Edit** or **Remove** to revise entries. New books appear first.
+5. Click **Download books.js**, then replace the repository’s `books.js` with your downloaded file and commit the change. Your public shelf updates after GitHub Pages deploys.
+6. Keep a downloaded backup. Your browser draft is local to that browser/device and is not a cloud account. Use **Import a saved books.js** to move your shelf to another device or restore a backup. An existing browser draft takes priority over the published data until you import a newer copy.
+
+The editor is an unlinked utility, not an authenticated admin area. Visitors cannot publish changes to your repository through it. Only uploaded data is public; browser drafts stay on the device. Never put private notes or secrets in the published shelf file. The public shelf starts empty because no finished-book list, personal reviews, or affiliate URLs have been supplied. Affiliate buttons appear only when a valid link is provided and are labelled individually.
