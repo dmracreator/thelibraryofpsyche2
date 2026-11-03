@@ -21,7 +21,7 @@ function refresh(message = '') {
   });
   if (message) status.textContent = message;
 }
-function persist(message) { try { localStorage.setItem(draftKey, JSON.stringify(books)); } catch { message += ' Browser storage is full or unavailable; download your shelf now to keep it.'; } refresh(message); }
+function persist(message) { try { localStorage.setItem(draftKey, JSON.stringify(books)); } catch { message += ' Browser storage is full or unavailable; download your shelf now to keep it.'; } refresh(message); document.dispatchEvent(new Event('psyche-shelf-changed')); }
 function resetForm() { editing = -1; form.reset(); document.getElementById('save-book').textContent = 'Add to my shelf'; document.getElementById('cancel-edit').hidden = true; }
 document.getElementById('cancel-edit').addEventListener('click', resetForm);
 form.addEventListener('submit', async event => {

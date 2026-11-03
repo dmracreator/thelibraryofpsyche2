@@ -63,6 +63,6 @@
     busy=true;updateButtons();
     try{const result=await api('GET');books=result.books;published=result.books;revision=result.sha;conflict=false;resetForm();persist('Loaded your published shelf.');state.textContent='Published shelf loaded. You can edit and publish your next update.';}catch(error){state.textContent=error.message;}finally{busy=false;updateButtons();}
   });
-  form.addEventListener('submit',()=>setTimeout(updateButtons,0));
+  document.addEventListener('psyche-shelf-changed',updateButtons);
   if(session)connect();else updateButtons();
 })();
