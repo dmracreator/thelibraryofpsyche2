@@ -41,13 +41,18 @@ Palette: #f6f5f3, #8b3a3b, #3a3a3a, #ffedf3, #656565, and deep burgundy #5d2526.
 
 Workshop photographs were cleaned with the built-in image editor to remove social-media overlays. Prompt: remove only superimposed text and UI; preserve people, objects, setting, lighting, and real-world signage.
 
-## Add books to your reading shelf
+## Add books and publish from the browser
 
-1. Open `edit-shelf.html` in your browser (double-click it, or visit your site’s `/edit-shelf.html` address).
-2. Add the title, author, optional finish month, your own review, and an optional affiliate URL.
-3. Choose a cover photo from your computer, or enter an image URL or a path such as `assets/covers/my-book.jpg`. Chosen photos are embedded in the exported file, so no separate image upload is needed. For a local path, upload that image separately. Use small web-friendly images you have permission to use.
-4. Click **Add to my shelf**. Use **Edit** or **Remove** to revise entries. New books appear first.
-5. Click **Download books.js**, then replace the repository’s `books.js` with your downloaded file and commit the change. Your public shelf updates after GitHub Pages deploys.
-6. Keep a downloaded backup. Your browser draft is local to that browser/device and is not a cloud account. Use **Import a saved books.js** to move your shelf to another device or restore a backup. An existing browser draft takes priority over the published data until you import a newer copy.
+1. Open https://thelibraryofpsyche.com/edit-shelf.html.
+2. Add or edit a book and click **Add to my shelf** or **Save changes**. Drafts are saved in this browser when storage is available.
+3. Click **Sign in with GitHub** using the owner account `dmracreator`.
+4. Click **Publish to website**. The publisher updates only `books.js` in this repository. GitHub Pages deploys the change; allow a few minutes.
+5. **Load published shelf** brings the latest public data to another device. Download a backup before replacing unpublished notes.
 
-The editor is an unlinked utility, not an authenticated admin area. Visitors cannot publish changes to your repository through it. Only uploaded data is public; browser drafts stay on the device. Never put private notes or secrets in the published shelf file. The public shelf starts empty because no finished-book list, personal reviews, or affiliate URLs have been supplied. Affiliate buttons appear only when a valid link is provided and are labelled individually.
+Cover photos selected from your computer are embedded in the shelf file. External cover URLs and `assets/` paths are also supported. Uploaded covers and notes pass through the Cloudflare publishing service to GitHub when you publish. Use web-friendly images you have permission to use. Affiliate links are optional and clearly labelled.
+
+Your sign-in lasts up to one hour and is kept only in this tab’s session storage. Sign out clears it. Your GitHub access token and the app secret are never placed in the public website. Only the owner account can publish. The GitHub App is installed only on this repository, with Contents read/write and Metadata read permissions. Secrets belong in the Cloudflare Worker settings, never this repository. The public service address is in `publisher-config.js`.
+
+If the shelf changed on another device, publishing stops rather than overwriting it. Download your draft, load the published shelf, and reapply your changes. Drafts are local to your browser; loading the published shelf or importing a backup replaces that local draft after confirmation.
+
+The download/import tools remain available as a fallback: download **books.js** and replace that file in GitHub to publish manually. The editor is unlinked and not private; anyone can draft locally, but only the authenticated owner can publish. Never include private information in published reading notes.

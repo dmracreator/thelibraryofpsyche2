@@ -36,7 +36,7 @@ form.addEventListener('submit', async event => {
   }
   if (book.cover && !shelfURL(book.cover, true)) { status.textContent = 'Use a local image path or an http:// or https:// cover address.'; return; }
   if (editing < 0) books.unshift(book); else books[editing] = book;
-  resetForm(); persist('Saved to your draft. Download books.js and upload it to GitHub when ready.');
+  resetForm(); persist('Saved to your draft. Publish when ready, or download a backup.');
 });
 document.getElementById('download-shelf').addEventListener('click', () => {
   const data = '// Published reading shelf\nwindow.READING_SHELF = ' + JSON.stringify(books, null, 2) + ';\n';
